@@ -40,6 +40,7 @@ var imgs_html = `
 </div>
 `;
 
+
 /*
   Styles
 */
@@ -132,6 +133,8 @@ info.update = function ( e ) {
       // add the efect
       box = document.getElementsByClassName('box')[0]
       box.className += ' in'
+
+      lightGallery(document.getElementById('lightgallery'));
     }
 }
 
