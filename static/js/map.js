@@ -32,7 +32,7 @@ var box_base = `
       <li><i class="fa fa-check" aria-hidden="true"></i>Adquisición y distribución de 48 equipos de computación para hogares</li>
     </ul>
 
-    <h5>Hace click sobre alguna de las provincias habilitadas para mas informacion</h5>
+    <h5 class="info-footer">Hace click sobre alguna de las provincias habilitadas para mas informacion</h5>
   </div><!--/info-text -->
 
   <div id="box-imgs">
