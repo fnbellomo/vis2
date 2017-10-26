@@ -9,11 +9,30 @@ var attribution = '<a href="http://openstreetmap.org">OpenStreetMap</a> contribu
 
 var box_base = `
 <div class="info-box">
-  <h4 class="info-title">Informacion de las Provincias en la que trabajamos</h4>
+  <h2 class="info-title">Proyecto Llaves para la Autonomía. UNICEF y DONCEL</h2>
 
   <div class="info-text in">
-    <br />Aca tiene que ir un texto explicando el trabajo que han realizado usteds.
-    <br />Hace click sobre alguna
+    <p>El proyecto apunta al desarrollo y fortalecimiento de políticas y prácticas institucionales que
+       acompañen el egreso de los jóvenes de los Hogares del sistema de protección para la vida
+       independiente.</p>
+
+    <h3 class="info-title">El Proyecto en NÚMEROS (2016-2017)</h3>
+    <ul>
+      <li><i class="fa fa-check" aria-hidden="true"></i>7 provincias (Salta, Santiago del Estero, Misiones, Jujuy, Tucumán, Santa Fe, Buenos Aires)</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>1966 participantes</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>371 adolescentes y jóvenes</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>88 actividades de capacitación realizadas</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Más de 60 hogares alcanzados</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>3 Casas de pre-egreso en funcionamiento</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>1 Comité de pre-egreso constituido</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>11 adolescentes formados y capacitados</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>3 jóvenes accedieron a un empleo formal</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Vínculos establecidos con 73 empresas</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Gestión de gabinetes tecnológicos</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Adquisición y distribución de 48 equipos de computación para hogares</li>
+    </ul>
+
+    <h5>Hace click sobre alguna de las provincias habilitadas para mas informacion</h5>
   </div><!--/info-text -->
 
   <div id="box-imgs">
@@ -21,65 +40,6 @@ var box_base = `
 
 </div><!--/info-box -->
 `;
-
-var html_media = `
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col">
-      <div id="lightgallery">
-          <a href="static/imgs/Misiones Habilidades Laborales4.jpg">
-            <img src="static/imgs/Misiones Habilidades Laborales4_thumb.jpg" class="img-thumbnail" style="max-width: 25%;" />
-          </a>
-
-          <a href="static/imgs/Misiones Lib Expresion 1.jpg">
-            <img src="static/imgs/Misiones Lib Expresion 1_thumb.jpg" class="img-thumbnail" style="max-width: 25%;" />
-          </a>
-
-          <a href="static/imgs/Misiones Lib Expresion 2.jpg">
-            <img src="static/imgs/Misiones Lib Expresion 2_thumb.jpg" class="img-thumbnail" style="max-width: 25%;" />
-          </a>
-
-          <a href="static/imgs/Misiones Taller TICs (1).jpg">
-            <img src="static/imgs/Misiones Taller TICs (1)_thumb.jpg" class="img-thumbnail" style="max-width: 25%;" />
-          </a>
-      </div><!--/lightgallery -->
-    </div><!--col -->
-  </div><!--row -->
-</div><!--/container -->
-`;
-
-var html_media = `
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <div id="lightgallery">
-        <div id="video-gallery">
-          <a href="https://vimeo.com/240002168" data-poster="static/imgs/santa_fe_1_t.png" >
-            <img src="static/imgs/santa_fe_1_t.png" class="img-thumbnail" style="max-width: 49%;" />
-          </a>
-
-          <a href="https://vimeo.com/239999840" data-poster="static/imgs/santa_fe_2_t.png">
-            <img src="static/imgs/santa_fe_2_t.png" class="img-thumbnail" style="max-width: 49%;" />
-          </a>
-        </div>
-        </div><!--/lightgallery -->
-    </div><!--col -->
-  </div><!--row -->
-</div><!--/container -->
-`
-
-var html_media = `
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8">
-
-      <iframe src="https://player.vimeo.com/video/239996754?autoplay=1&byline=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-    </div><!--/col -->
-  </div><!--/row -->
-</div><!--/container -->
-`
-
 
 /*
   Styles
@@ -137,6 +97,11 @@ var provincesLayer = new L.GeoJSON.AJAX("./data/provincias.geojson", {
     style: setStyle,
     onEachFeature: onEachFeature
 })
+
+// Personal button
+L.easyButton('<img class="icon-info" src="static/imgs/110_UNICEF_ICON_REPORTING_CYAN.png">', function(){
+  info._div.innerHTML = box_base
+}).addTo(map);
 
 /*
   Info div methods

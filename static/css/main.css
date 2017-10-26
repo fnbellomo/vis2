@@ -4,9 +4,15 @@ Estilo general
 html, body {
     height: 100%;
     width: 100%;
+    font-family: 'Open Sans', sans-serif !important;
 }
+
 body {
     margin: 0;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .navbar {
@@ -43,17 +49,40 @@ Mapa
     cursor: grab;
 }
 
+.leaflet-control-zoom-out, .leaflet-control-zoom-in {
+  color: #0096ff !important;
+}
+
+.icon-info {
+  height: 100%;
+  margin-left: -7px;
+}
+
 .info {
+    font-family: 'Open Sans', sans-serif !important;
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
-.info h4 {
-    margin: 0 0 5px;
-    color: #777;
+
+.info-title {
+  padding-bottom: 20px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.info-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 200%;
+}
+
+li i {
+  color: #0096ff;
 }
 
 .info-text {
