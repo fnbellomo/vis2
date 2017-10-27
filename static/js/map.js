@@ -5,12 +5,12 @@ var origin_lat = -36
 var origin_lon = -38
 
 var cameraIcon = L.icon({
-    iconUrl: '/static/imgs/camera_icon.png',
+    iconUrl: 'static/imgs/camera_icon.png',
     iconSize:     [70, 70] // size of the icon
 });
 
 var videoIcon = L.icon({
-    iconUrl: '/static/imgs/video_icon.png',
+    iconUrl: 'static/imgs/video_icon.png',
     iconSize:     [70, 70] // size of the icon
 });
 
