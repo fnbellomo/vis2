@@ -4,6 +4,31 @@
 var origin_lat = -36
 var origin_lon = -38
 
+var cameraIcon = L.icon({
+    iconUrl: '/static/imgs/camera_icon.png',
+    iconSize:     [70, 70] // size of the icon
+});
+
+var videoIcon = L.icon({
+    iconUrl: '/static/imgs/video_icon.png',
+    iconSize:     [70, 70] // size of the icon
+});
+
+var centers = {
+  'Santa Fe': {'coordinate': { lat: -30.752158806156256, lng: -60.959973235807766 },
+   'icon': videoIcon},
+  'Jujuy': {'coordinate': { lat: -22.8, lng: -66 },
+   'icon': videoIcon},
+  'Salta': {'coordinate': { lat: -25, lng: -64.8 },
+   'icon': videoIcon},
+  'Tucuman': {'coordinate': { lat: -27, lng: -65.3 },
+   'icon': videoIcon},
+  'Provincia de Buenos Aires': {'coordinate': { lat: -36.71419287155791, lng: -60.56809303977275 },
+   'icon': videoIcon},
+  'Misiones': {'coordinate': { lat: -26.7, lng: -54.5 },
+   'icon': cameraIcon}
+}
+
 var tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 var attribution = '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
 
@@ -116,7 +141,6 @@ info.onAdd = function ( map ) {
 
 info.update = function ( e ) {
     //this.getElement().classList.add('active')
-
     // Method that we will use to update the control based on feature properties passed
     var properties = e.target.feature.properties
 
@@ -159,6 +183,16 @@ function onEachFeature ( feature, layer ) {
     	mouseout: resetHighlight,
     	click: info.update
     });
+
+    // Add the icons
+    if (feature.properties.isEnabled) {
+      var point = centers[feature.properties.name]
+      L.marker(point.coordinate, { icon: point.icon })
+       .addTo(map)
+       .on('click', function(){
+         map._layers[layer._leaflet_id].fire('click')
+       })
+    }
 }
 
 function highlightFeature( e ) {
