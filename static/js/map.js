@@ -12,6 +12,9 @@ var box_base = `
   <h2 class="info-title">Proyecto "Llaves para la Autonomía"
   <br />UNICEF y DONCEL</h2>
 
+  <div id="box-imgs">
+  </div><!--/box-imgs -->
+
   <div class="info-text in">
     <p>El proyecto apunta al desarrollo y fortalecimiento de políticas y prácticas institucionales que
        acompañen el egreso de los jóvenes de los Hogares del sistema de protección para la vida
@@ -24,20 +27,17 @@ var box_base = `
       <li><i class="fa fa-check" aria-hidden="true"></i>371 adolescentes y jóvenes.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>88 actividades de capacitación realizadas.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>Más de 60 hogares alcanzados.</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>3 Casas de pre-egreso en funcionamiento.</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>1 Comité de pre-egreso constituido.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>3 Casas de Pre-Egreso en funcionamiento.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>1 Comité de Pre-Egreso constituido.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>11 adolescentes formados y capacitados.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>3 jóvenes accedieron a un empleo formal.</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>Vínculos establecidos con 73 empresas.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>73 empresas participaron de la iniciativa.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>Gestión de gabinetes tecnológicos.</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>Adquisición y distribución de 48 equipos de computación para hogares.</li>
     </ul>
 
-    <h5 class="info-footer">Hace click sobre alguna de las provincias habilitadas para mas informacion</h5>
+    <h3 class="info-footer">Tocá alguna de las provincias habilitadas para más información</h3>
   </div><!--/info-text -->
-
-  <div id="box-imgs">
-  </div><!--/box-imgs -->
 
 </div><!--/info-box -->
 `;
@@ -115,6 +115,8 @@ info.onAdd = function ( map ) {
 }
 
 info.update = function ( e ) {
+    //this.getElement().classList.add('active')
+
     // Method that we will use to update the control based on feature properties passed
     var properties = e.target.feature.properties
 
@@ -153,9 +155,9 @@ function setStyle ( feature ) {
 function onEachFeature ( feature, layer ) {
     // Set the event over each province
     layer.on({
-	mouseover: highlightFeature,
-	mouseout: resetHighlight,
-	click: info.update
+    	mouseover: highlightFeature,
+    	mouseout: resetHighlight,
+    	click: info.update
     });
 }
 
@@ -165,7 +167,7 @@ function highlightFeature( e ) {
     var properties = e.target.feature.properties
 
     if ( properties.isEnabled ) {
-	layer.setStyle( highlightStyle )
+	     layer.setStyle( highlightStyle )
     }
 }
 

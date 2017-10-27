@@ -20,6 +20,10 @@ li i {
   color: #0096ff;
 }
 
+li strong, p strong {
+  color: #0096ff;
+}
+
 .navbar {
     background: #0096ff;
     z-index: 900;
@@ -67,7 +71,7 @@ li i {
 .info {
     font-family: 'Open Sans', sans-serif !important;
     font-size: 1.4em;
-    line-height: 200%;
+    line-height: 180%;
     padding: 6px 8px;
     background: white;
     background: rgba(255,255,255,0.8);
@@ -96,6 +100,22 @@ li i {
 
 .info-footer {
   color: #0096ff;
+  font-weight: bold;
+}
+
+/* The animation code */
+@keyframes example {
+   0%   {background-color: red;}
+   25%  {background-color: yellow;}
+   50%  {background-color: blue;}
+   100% {background-color: green;}
+}
+
+/* The element to apply the animation to */
+.active {
+   background-color: red;
+   animation-name: example;
+   animation-duration: 4s;
 }
 
 /**********************************************************
