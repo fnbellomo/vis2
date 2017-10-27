@@ -1,5 +1,5 @@
 /**********************************************************
-Estilo general
+ Estilo general
 **********************************************************/
 html, body {
     height: 100%;
@@ -11,29 +11,21 @@ body {
     margin: 0;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif !important;
+li {
+  list-style-type: none;
+}
+
+li i {
+  padding-right: 10px;
+  color: #0096ff;
 }
 
 .navbar {
     background: #0096ff;
     z-index: 900;
 }
-
-li {
-  list-style-type: none;
-}
-
-footer {
-    background: white;
-    color: #287a02;
-}
-
-footer img {
-    max-width: 290px;
-}
 /**********************************************************
-Mapa
+ Mapa
 **********************************************************/
 #map {
     width: 100%;
@@ -54,12 +46,8 @@ Mapa
   padding-top: 10px;
 }
 
-.disabledProvince {
-    cursor: grab;
-}
-
-.leaflet-control-zoom-out, .leaflet-control-zoom-in {
-  color: #0096ff !important;
+.leaflet-control a{
+  color: #0096ff;
 }
 
 .icon-info {
@@ -67,35 +55,30 @@ Mapa
   margin-left: -7px;
 }
 
+.disabledProvince {
+    cursor: grab;
+}
+
 .container.info {
   max-width: 900px;
+  margin-right: 50px;
 }
 
 .info {
     font-family: 'Open Sans', sans-serif !important;
+    font-size: 1.1em;
+    line-height: 200%;
     padding: 6px 8px;
     background: white;
     background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 15px 15px 20px -6px #000;
     border-radius: 5px;
 }
 
 .info-title {
   padding-bottom: 20px;
-  font-weight: bold;
   margin: 0 0 5px;
   color: #777;
-}
-
-.info-text {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 1.1em;
-  line-height: 200%;
-}
-
-li i {
-  color: #0096ff;
 }
 
 .info-text {
@@ -115,6 +98,9 @@ li i {
   color: #0096ff;
 }
 
+/**********************************************************
+ Gallery
+**********************************************************/
 .gallery-poster {
     background-color: rgba(0, 0, 0, 0.1);
     bottom: 0;

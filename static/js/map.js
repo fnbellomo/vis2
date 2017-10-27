@@ -9,16 +9,17 @@ var attribution = '<a href="http://openstreetmap.org">OpenStreetMap</a> contribu
 
 var box_base = `
 <div class="info-box">
-  <h2 class="info-title">Proyecto Llaves para la Autonomía. UNICEF y DONCEL</h2>
+  <h2 class="info-title">Proyecto "Llaves para la Autonomía"
+  <br />UNICEF y DONCEL</h2>
 
   <div class="info-text in">
     <p>El proyecto apunta al desarrollo y fortalecimiento de políticas y prácticas institucionales que
        acompañen el egreso de los jóvenes de los Hogares del sistema de protección para la vida
        independiente.</p>
 
-    <h3 class="info-title">El Proyecto en NÚMEROS (2016-2017)</h3>
+    <h3 class="info-title">El proyecto en números (2016-2017)</h3>
     <ul>
-      <li><i class="fa fa-check" aria-hidden="true"></i>7 provincias (Salta, Santiago del Estero, Misiones, Jujuy, Tucumán, Santa Fe, Buenos Aires)</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>7 provincias (Buenos Aires, Jujuy, Misiones, Salta, Santa Fe, Santiago del Estero y Tucumán)</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>1966 participantes</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>371 adolescentes y jóvenes</li>
       <li><i class="fa fa-check" aria-hidden="true"></i>88 actividades de capacitación realizadas</li>
@@ -127,15 +128,8 @@ info.update = function ( e ) {
       div = document.getElementById('box-imgs')
       div.innerHTML = properties.html_media
 
-
-      // add the efect
-      //box = document.getElementsByClassName('box')[0]
-      //box.className += ' in'
-
       lightGallery(document.getElementById('lightgallery'))
       lightGallery(document.getElementById('video-gallery'))
-
-
     }
 }
 
