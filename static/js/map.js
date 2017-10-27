@@ -19,18 +19,18 @@ var box_base = `
 
     <h3 class="info-title">El proyecto en números (2016-2017)</h3>
     <ul>
-      <li><i class="fa fa-check" aria-hidden="true"></i>7 provincias (Buenos Aires, Jujuy, Misiones, Salta, Santa Fe, Santiago del Estero y Tucumán)</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>1966 participantes</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>371 adolescentes y jóvenes</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>88 actividades de capacitación realizadas</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>Más de 60 hogares alcanzados</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>3 Casas de pre-egreso en funcionamiento</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>1 Comité de pre-egreso constituido</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>11 adolescentes formados y capacitados</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>3 jóvenes accedieron a un empleo formal</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>Vínculos establecidos con 73 empresas</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>Gestión de gabinetes tecnológicos</li>
-      <li><i class="fa fa-check" aria-hidden="true"></i>Adquisición y distribución de 48 equipos de computación para hogares</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>7 provincias (Buenos Aires, Jujuy, Misiones, Salta, Santa Fe, Santiago del Estero y Tucumán).</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>1966 participantes.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>371 adolescentes y jóvenes.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>88 actividades de capacitación realizadas.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Más de 60 hogares alcanzados.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>3 Casas de pre-egreso en funcionamiento.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>1 Comité de pre-egreso constituido.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>11 adolescentes formados y capacitados.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>3 jóvenes accedieron a un empleo formal.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Vínculos establecidos con 73 empresas.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Gestión de gabinetes tecnológicos.</li>
+      <li><i class="fa fa-check" aria-hidden="true"></i>Adquisición y distribución de 48 equipos de computación para hogares.</li>
     </ul>
 
     <h5 class="info-footer">Hace click sobre alguna de las provincias habilitadas para mas informacion</h5>
