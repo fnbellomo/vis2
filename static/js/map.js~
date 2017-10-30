@@ -5,13 +5,13 @@ var origin_lat = -36
 var origin_lon = -38
 
 var cameraIcon = L.icon({
-    iconUrl: 'static/imgs/camera_icon_white.png',
-    iconSize:     [40, 40] // size of the icon
+    iconUrl: 'static/imgs/camera_icon.png',
+    iconSize:     [70, 70] // size of the icon
 });
 
 var videoIcon = L.icon({
-    iconUrl: 'static/imgs/video_icon_white.png',
-    iconSize:     [40, 40] // size of the icon
+    iconUrl: 'static/imgs/video_icon.png',
+    iconSize:     [70, 70] // size of the icon
 });
 
 var centers = {
@@ -19,11 +19,11 @@ var centers = {
    'icon': videoIcon},
   'Jujuy': {'coordinate': { lat: -22.8, lng: -66 },
    'icon': videoIcon},
-  'Salta': {'coordinate': { lat: -25.3, lng: -64.8 },
+  'Salta': {'coordinate': { lat: -25, lng: -64.8 },
    'icon': videoIcon},
   'Tucuman': {'coordinate': { lat: -27, lng: -65.3 },
    'icon': videoIcon},
-  'Provincia de Buenos Aires': {'coordinate': { lat: -36.71419287155791, lng: -60.56809303977275 },
+  'Buenos Aires': {'coordinate': { lat: -36.71419287155791, lng: -60.56809303977275 },
    'icon': videoIcon},
   'Misiones': {'coordinate': { lat: -26.7, lng: -54.5 },
    'icon': cameraIcon}
