@@ -1,68 +1,107 @@
-
-.portada{
-	width: 100%;
-	height: 310px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	background: linear-gradient(to right, #00b3ef 0%,#0076bf 50%,#8bc540 100%);
-
-}
-
-#contenedor{
-	margin: 10px;
-}
-
-h1{
-	font-size: 50px;
-	color: white;
-	text-align: center;
-	font-family: 'Kalam', cursive;
-	font-weight: 700;
-}
-
-.texto{
-	font-size: 15px;
-	color: white;
-	padding: 10px;
-}
-
-.info{
-	padding: 20px;
-}
-
-#mapid { 
-	height: 180px; 
-}
-
-.ref{
-	margin: 10px
-}
-
-h3{
-	font-size: 15px;
-	font-weight: bold;
-}
-
+/* General style */
 li{
 	list-style: none;
 }
 
-img{
-	height: 30px;
+/* Main text */
+.portada {
+    color: white;
+    background: #00b3ef;
+    background: -moz-linear-gradient(left, #00b3ef 0%, #0076bf 50%, #8bc540 100%);
+    background: -webkit-linear-gradient(left, #00b3ef 0%,#0076bf 50%,#8bc540 100%);
+    background: linear-gradient(to right, #00b3ef 0%,#0076bf 50%,#8bc540 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.portada h1 {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+}
+
+/* Map */
+#mapid {
+	height: 180px;
+}
+
+.info{
+	padding: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: 5px 5px 5px 5px #111;
+    background: #E6ECF0;
+}
+
+.info > li > img {
+    margin-right: 10px;
+    height: 30px;
 	width: 30px;
 }
 
+/* Sequence */
+#sidebar {
+  float: right;
+  width: 100px;
+  padding-top: 80px;
+}
 
-/*.usal{
-	position: absolute;
-	left: 233px;
-	top: 175px;
+#sequence {
+  width: 600px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+#chart {
+  position: relative;
+}
+
+#chart path {
+  stroke: #fff;
 }
 
 
-.uces{
-	position: absolute;
-	left: 275px;
-	top: 212px;
-}
+#contenedor{
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 210px;
+  left: 286px;
+  /*display: flex;
+  justify-content: center;
 */
+
+}
+
+#explanation {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  background-color: #fff;
+  width: 560px;
+  height: 700px;
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 25px;
+  color: #666;
+  z-index: -1;
+
+}
+
+
+
+#percentage {
+  font-size: 1.5em;
+}
+
+#myinput {
+  min-width: 280px;
+}

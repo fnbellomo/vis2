@@ -146,7 +146,7 @@ var data = [
 ]
 
 // Create the map and the legend
-var map = L.map('mapid').setView([-34.45,-58.9], 13),
+var map = L.map('mapid').setView([-34.45,-58.9], 12),
     legend = L.control({position: 'bottomright'})
 
 // Create the tile layer with correct attribution
@@ -160,10 +160,15 @@ map.addLayer(osm)
 // Add the points
 for (var i=0; i<data.length; i++) {
 	var marker = L.marker(data[i].position, {icon: data[i].icon}).addTo(map)
-    var text = '<h3>' + data [i].name + '</h3> <span><strong>Sitio Web:</strong> <a href="' +
-               data[i].web + '" target="_blank">' + data[i].web + '</a></span>' +
-			   '<span><br><strong>Telefono:</strong> ' + data[i].phone + '</span>'
+    var text = '<h3>' + data [i].name + '</h3>'
 	marker.bindPopup(text)
+
+    marker.on('mouseover', function (e) {
+            this.openPopup();
+    })
+    marker.on('mouseout', function (e) {
+        this.closePopup();
+    })
 }
 
 // Fill the legend

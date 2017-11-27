@@ -4,11 +4,11 @@ var col = document.getElementsByClassName('col-md-6')[1]
 var svgSize = {
     // 30 padding de las row
     // 100 width de las referencias
-    width: col.clientWidth - 30 - 100,
-    height: col.clientWidth - 30 - 100
+    width: col.clientWidth - 30 - 150,
+    height: col.clientWidth - 30 - 150
 }
 
-width_trail = 1000,
+width_trail = "100%",
 radius = Math.min(svgSize.width, svgSize.height) / 2
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -160,7 +160,7 @@ function texto ( d ) {
     */
     var ancestors_len = d.ancestors().reverse().length
 
-    return ancestors_len == 2                               ? "Hay " + d.children.length + " instituciones " + d.data.name + " de educación superior" :
+    return ancestors_len == 2                               ? "Hay " + d.children.length + " instituciones " + d.data.name + "s de educación superior" :
            ancestors_len == 3 && d.data.children.length > 1 ? d.data.name + " tiene " + d.data.children.length + " áreas de estudio" :
            ancestors_len == 3                               ? d.data.name + " tiene " + d.data.children.length + " área de estudio":
            ancestors_len == 4 && d.data.children.length > 1 ? "El área de " + d.data.name + " en " + d.parent.data.name + " tiene " + d.data.children.length + " carreras":
@@ -202,7 +202,6 @@ function createVisualization(json) {
     */
     // Basic setup of page elements.
     initializeBreadcrumbTrail();
-    drawLegend();
     d3.select("#togglelegend").on("click", toggleLegend);
 
     // Bounding circle underneath the sunburst, to make it easier to detect
@@ -242,12 +241,14 @@ function createVisualization(json) {
     totalSize = path.datum().value;
 };
 
-function setExplanation(width) {
+function setExplanation(width_c) {
     var explanationSize = {
-        width: width,
-        height: width,
-        top: svgSize.width/2 - width/2,
-        left: svgSize.height/2 - width/2
+        width: width_c/Math.sqrt(2),
+        height: width_c/Math.sqrt(2),
+        //top: svgSize.width/2 - width/2 + (svgSize.width - width)/2,
+        //left: svgSize.height/2 - width/2 + (svgSize.width - width)/2
+        top: svgSize.width/2 - (width_c/Math.sqrt(2))/2,
+        left: svgSize.width/2 - (width_c/Math.sqrt(2))/2
     }
 
     var explanation = document.getElementById('explanation')
@@ -373,39 +374,6 @@ function updateBreadcrumbs(nodeArray, percentageString) {
   d3.select("#trail")
       .style("visibility", "");
 
-}
-
-function drawLegend() {
-
-  // Dimensions of legend item: width, height, spacing, radius of rounded rect.
-  var li = {
-    w: 95, h: 30, s: 3, r: 3
-  };
-
-  var legend = d3.select("#legend").append("svg:svg")
-      .attr("width", li.w)
-      .attr("height", d3.keys(colors).length * (li.h + li.s));
-
-  var g = legend.selectAll("g")
-      .data(d3.entries(colors))
-      .enter().append("svg:g")
-      .attr("transform", function(d, i) {
-              return "translate(0," + i * (li.h + li.s) + ")";
-           });
-
-  g.append("svg:rect")
-      .attr("rx", li.r)
-      .attr("ry", li.r)
-      .attr("width", li.w)
-      .attr("height", li.h)
-      .style("fill", function(d) { return d.value; });
-
-  g.append("svg:text")
-      .attr("x", li.w / 2)
-      .attr("y", li.h / 2)
-      .attr("dy", "0.35em")
-      .attr("text-anchor", "middle")
-      .text(function(d) { return d.key; });
 }
 
 function toggleLegend() {
