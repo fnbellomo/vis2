@@ -79,9 +79,37 @@ li{
   color: #666;
 }
 
-#percentage {
-  font-size: 1.5em;
+@media (min-width: 576px) {
+    #percentage {
+		font-size: 0.6em;
+    }
+
+	#mapid {
+		height: 500px;
+	}
 }
+
+@media (min-width: 768px) {
+    #percentage {
+		font-size: 1em;
+    }
+
+	#mapid {
+		height: 600px;
+	}
+}
+
+@media (min-width: 992px) {
+    #percentage {
+		font-size: 1.3em;
+    }
+
+	#mapid {
+		height: 700px;
+	}
+}
+
+
 
 #myinput {
   min-width: 320px;

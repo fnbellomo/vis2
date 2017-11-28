@@ -4,8 +4,8 @@ var col = document.getElementsByClassName('col-md-6')[1]
 var svgSize = {
     // 30 padding de las row
     // 100 width de las referencias
-    width: col.clientWidth - 30 - 150,
-    height: col.clientWidth - 30 - 150
+    width: col.clientWidth - 30,
+    height: col.clientWidth - 30
 }
 
 width_trail = "100%",
@@ -13,11 +13,13 @@ radius = Math.min(svgSize.width, svgSize.height) / 2
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 200,
+  w: col.clientWidth/4.5,
   h: 30,
   s: 3,
   t: 10
 };
+
+var sizeTextSequence = "0.1em"
 
 // Mapping of step names to colors.
 var universidades = ["UNLU", "UCES","UNIPE","UBA CIENCIAS ECONOMICAS",
@@ -353,7 +355,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
   entering.append("svg:text")
       .attr("x", (b.w + b.t) / 2)
       .attr("y", b.h / 2)
-      .attr("dy", "0.35em")
+      .attr("dy", sizeTextSequence)
       .attr("text-anchor", "middle")
       .text(function(d) { return d.data.name; });
 
@@ -366,7 +368,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
   d3.select("#trail").select("#endlabel")
       .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
       .attr("y", b.h / 2)
-      .attr("dy", "0.35em")
+      .attr("dy", sizeTextSequence)
       .attr("text-anchor", "middle")
       .text(percentageString);
 
