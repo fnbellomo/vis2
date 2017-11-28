@@ -151,7 +151,7 @@ var map = L.map('mapid').setView([-34.45,-58.9], 12),
 
 // Create the tile layer with correct attribution
 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    osmAttrib = 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
     osm = new L.TileLayer(osmUrl, {minZoom: 10, maxZoom: 15, attribution: osmAttrib})
 
 // Add the tile
